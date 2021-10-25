@@ -1,7 +1,7 @@
 on:
   pull_request:
     branches:
-      - master
+      - branch-test-path
     paths:
       - '.github/workflows/branchTestPath.yml'
     types: [opened, synchronize, closed]
