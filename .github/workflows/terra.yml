@@ -36,7 +36,7 @@ jobs:
         uses: actions/checkout@master
 
       - name: "Configure AWS Credentials"
-        uses: aws-actions/configure-aws-credentials@05b148adc31e091bafbaf404f745055d4d3bc9d2
+        uses: aws-actions/configure-aws-credentials@67fbcbb121271f7775d2e7715933280b06314838
         with:
           aws-region: us-east-1
           role-to-assume: arn:aws:iam::${{ env.AWS_ACCOUNT_ID }}:role/${{ env.SERVICE }}-${{ env.STAGE }}-github-action
@@ -100,7 +100,7 @@ jobs:
         uses: actions/checkout@master
 
       - name: "Configure AWS Credentials"
-        uses: aws-actions/configure-aws-credentials@05b148adc31e091bafbaf404f745055d4d3bc9d2
+        uses: aws-actions/configure-aws-credentials@67fbcbb121271f7775d2e7715933280b06314838
         with:
           aws-region: us-east-1
           role-to-assume: arn:aws:iam::${{ env.AWS_ACCOUNT_ID }}:role/${{ env.SERVICE }}-${{ env.STAGE }}-github-action
