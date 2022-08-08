@@ -12,4 +12,4 @@ jobs:
         with:
           commit-message: 'Update README.md'
           title: 'Update README.md'
-          body: 'Closes #$github.event.issue.number '
+          body: 'Closes #$github.event.issue.number'
