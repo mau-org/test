@@ -10,6 +10,7 @@ jobs:
       - run: echo 'test' > 'README.md'
       - uses: peter-evans/create-pull-request@923ad837f191474af6b1721408744feb989a4c27 # v4.0.4
         with:
+          branch: create-pull-request/patches
           commit-message: 'Update README.md'
           title: 'Updating README.md'
           body: 'Closes #${{github.event.issue.number}}'
