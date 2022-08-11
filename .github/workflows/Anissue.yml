@@ -8,7 +8,7 @@ jobs:
     steps:
       - uses: actions/checkout@v3
       - run: echo 'test' > 'README.md'
-      - uses: mheap/phpunit-matcher-action@master
+      - uses: mheap/phpunit-matcher-action@main
         with:
           branch: auto-merge
           commit-message: 'Update README.md'
