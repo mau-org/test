@@ -1,2 +1,2 @@
 test
-[![](https://github.com/ansible-community/ansible-test-gh-action/actions/workflows/test-action.yml/badge.svg)](https://github.com/ansible-community/ansible-test-gh-action/actions/workflows/test-action.yml)
+![example event parameter](https://github.com/github/docs/actions/workflows/filter.yml/badge.svg?event=pullrequest)
