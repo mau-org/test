@@ -1,9 +1,6 @@
 name: testfilter
 on:
   push:
-    branches: 
-     - 'master'
-     - '**branch-**'
   pull_request:
   workflow_dispatch:
   
