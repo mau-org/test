@@ -1,4 +1,4 @@
-name: test filter
+name: testfilter
 on:
   push:
     branches: 
