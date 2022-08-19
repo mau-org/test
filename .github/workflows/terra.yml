@@ -43,7 +43,7 @@ jobs:
 
       - name: "Terragrunt Init"
         id: tf_init
-        uses: the-commons-project/terragrunt-github-actions@259fc9e56d89b4331cf23f6d3c4a1895cc754d2a
+        uses: the-commons-project/terragrunt-github-actions@96674b41c0db372843d61ed2d4708f0882753cac
         with:
           tf_actions_version: ${{ env.tf_version }}
           tg_actions_version: ${{ env.tg_version }}
@@ -52,7 +52,7 @@ jobs:
 
       - name: "Terragrunt Validate"
         id: tf_validate
-        uses: the-commons-project/terragrunt-github-actions@259fc9e56d89b4331cf23f6d3c4a1895cc754d2a
+        uses: the-commons-project/terragrunt-github-actions@96674b41c0db372843d61ed2d4708f0882753cac
         with:
           tf_actions_version: ${{ env.tf_version }}
           tg_actions_version: ${{ env.tg_version }}
@@ -62,7 +62,7 @@ jobs:
 
       - name: "Terragrunt Plan"
         id: tf_plan
-        uses: the-commons-project/terragrunt-github-actions@259fc9e56d89b4331cf23f6d3c4a1895cc754d2a
+        uses: the-commons-project/terragrunt-github-actions@96674b41c0db372843d61ed2d4708f0882753cac
         with:
           tf_actions_version: ${{ env.tf_version }}
           tg_actions_version: ${{ env.tg_version }}
@@ -107,7 +107,7 @@ jobs:
 
       - name: "Terragrunt Init"
         id: tf_init
-        uses: the-commons-project/terragrunt-github-actions@259fc9e56d89b4331cf23f6d3c4a1895cc754d2a
+        uses: the-commons-project/terragrunt-github-actions@96674b41c0db372843d61ed2d4708f0882753cac
         with:
           tf_actions_version: ${{ env.tf_version }}
           tg_actions_version: ${{ env.tg_version }}
@@ -116,7 +116,7 @@ jobs:
 
       - name: "Terragrunt Apply"
         id: tf_apply
-        uses: the-commons-project/terragrunt-github-actions@259fc9e56d89b4331cf23f6d3c4a1895cc754d2a
+        uses: the-commons-project/terragrunt-github-actions@96674b41c0db372843d61ed2d4708f0882753cac
         with:
           tf_actions_version: ${{ env.tf_version }}
           tg_actions_version: ${{ env.tg_version }}
