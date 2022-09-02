@@ -1,6 +1,5 @@
 on:
-  issues:
-  issue_comment:
+  push:
 
 jobs:
   test:
@@ -8,9 +7,5 @@ jobs:
     steps:
       - uses: actions/checkout@v3
       - run: echo 'test' > 'README.md'
-      - uses: mheap/phpunit-matcher-action@main
-        with:
-          branch: auto-merge
-          commit-message: 'Update README.md'
-          title: 'Updating README.md'
-          body: 'Closes #${{github.event.issue.number}}'
+      - uses: bubkoo/auto-assign@v1
+        
