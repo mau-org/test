@@ -18,6 +18,7 @@ on:
 jobs:
   say_hello:
     runs-on: ubuntu-latest
+    environment: ${{ github.event.inputs.environment}}
     steps:
     - run: |
        echo "name: ${{ github.event.inputs.name }}" 
