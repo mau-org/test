@@ -9,7 +9,11 @@ on:
       home:
         description: 'location'
         required: false
-        default: 'The Octoverse'
+        default: 'The Octoverse' 
+      environment:
+        description: 'env'
+        required: true
+        default: 'stage'
 
 jobs:
   say_hello:
