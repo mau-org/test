@@ -1,0 +1,11 @@
+{
+  addReviewers: true,
+  addAssignees: true,
+  reviewers: undefined,
+  assignees: undefined,
+  numberOfAssignees: 0,
+  numberOfReviewers: 0,
+  skipKeywords: undefined,
+  reviewGroups: undefined,
+  assigneeGroups: undefined,
+}

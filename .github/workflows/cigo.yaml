@@ -16,7 +16,7 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v2
+    - uses: actions/checkout@v3
     
     - name: Get release version
       id: release_version
@@ -34,7 +34,7 @@ jobs:
         go-version: 1.17
 
     - name: Set up Node.js ⚙️
-      uses: actions/setup-node@v3.4.1
+      uses: actions/setup-node@v3.5.0
       with:
         node-version: '14.x'
 

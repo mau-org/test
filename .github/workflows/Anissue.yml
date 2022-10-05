@@ -1,16 +1,16 @@
 on:
+  push:
   issues:
-  issue_comment:
-
+    types: [opened]
+  release:
+    types: [created]
 jobs:
   test:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
       - run: echo 'test' > 'README.md'
-      - uses: mheap/phpunit-matcher-action@main
+      - uses: bubkoo/auto-assign@v1
         with:
-          branch: auto-merge
-          commit-message: 'Update README.md'
-          title: 'Updating README.md'
-          body: 'Closes #${{github.event.issue.number}}'
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          CONFIG_FILE: config.yml
