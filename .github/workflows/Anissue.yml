@@ -1,5 +1,7 @@
 on:
   push:
+    paths:
+      - "new/*test*/**"
   issues:
     types: [opened]
   release:
