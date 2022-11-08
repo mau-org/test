@@ -1,0 +1,15 @@
+on:
+  issues:
+    types: [opened]
+  release:
+    types: [created]
+jobs:
+  jest:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - run: echo 'test' > 'README.md'
+      - uses: bubkoo/auto-assign@v2
+        with:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          CONFIG_FILE: config.yml
