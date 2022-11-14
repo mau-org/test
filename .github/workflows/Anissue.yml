@@ -5,10 +5,8 @@ on:
   release:
     types: [created]
 jobs:
-  test:
-  uses:  okimaureen/test/.github/workflows/reuse.yml@main
-    steps:
-      - uses: actions/checkout@v3
-      - run: echo 'test' > 'README.md'
+ test:
+  uses: okimaureen/test/.github/workflows/reuse.yml@main
+  
   
      
