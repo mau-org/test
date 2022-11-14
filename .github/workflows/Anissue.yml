@@ -1,7 +1,5 @@
 on:
   push:
-    paths:
-      - "new/*test*/**"
   issues:
     types: [opened]
   release:
@@ -10,9 +8,9 @@ jobs:
   test:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
-      - run: echo 'test' > 'README.md'
-      - uses: bubkoo/auto-assign@v2
+#       - uses: actions/checkout@v3
+#       - run: echo 'test' > 'README.md'
+      - uses:  okimaureen/test/.github/workflows/reuse.yml@main
         with:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           CONFIG_FILE: config.yml
