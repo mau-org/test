@@ -6,7 +6,7 @@ on:
     types: [created]
 jobs:
  test:
-  uses: okimaureen/test/.github/workflows/reuse.yml@main
+  uses: BrownBook/ExperientialLearningInventory/.github/workflows/node.js.yml@main
   
   
      
