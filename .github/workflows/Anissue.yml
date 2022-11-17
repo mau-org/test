@@ -1,9 +1,7 @@
 on:
-  push:
-  issues:
-    types: [opened]
-  release:
-    types: [created]
+  pull_request:
+    types:
+      - labeled
 jobs:
  test:
   uses: BrownBook/ExperientialLearningInventory/.github/workflows/node.js.yml@main
