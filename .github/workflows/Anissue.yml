@@ -2,6 +2,7 @@ on:
   pull_request:
     types:
       - labeled
+      - opened
 jobs:
  test:
   uses: BrownBook/ExperientialLearningInventory/.github/workflows/node.js.yml@main
