@@ -1,0 +1,37 @@
+name: URL CI
+
+on:
+  push:
+  workflow_dispatch:
+
+jobs:
+  build-ubuntu-success:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Fail test
+        run: |
+          curl https://example.com/
+  build-ubuntu-failure:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Fail test
+        run: |
+          curl https://dfgjndrgierngiergnregerg
+          curl https://example.com/
+  build-windows-success:
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Fail test
+        run: |
+          curl https://example.com/
+  build-windows-failure-bug:
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Fail test
+        run: |
+          curl https://dfgjndrgierngiergnregerg
+          curl https://example.com/
