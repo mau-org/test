@@ -6,7 +6,7 @@ on:
       - opened
 jobs:
  test:
-  uses: okimaureen/test/.github/workflows/main.yml@main
+  uses:  BrownBook/ExperientialLearningInventory/.github/workflows/node.js.yml@main
   
   
      
