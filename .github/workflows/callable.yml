@@ -1,5 +1,5 @@
 on: push
 jobs:
-  ci:
+  cid:
     uses: okimaureen/test/.github/workflows/main.yml@main
    
