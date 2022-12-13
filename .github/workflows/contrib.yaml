@@ -7,6 +7,14 @@ on:
       - reopened
 
 jobs:
+  checker:
+    runs-on: ubuntu-latest
+    steps:
+        - name: Install Cilium CLI
+          run: |
+            echo author_association=${{ github.event.pull_request.author_association }}
+
+  
   labeler:
     if: |
       (
