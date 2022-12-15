@@ -1,0 +1,14 @@
+name: Version and Release
+
+on:
+  push:
+    branches:
+      - 'main'
+    paths-ignore:
+      - '.github/**'
+
+jobs:
+  version-and-release:
+    uses: crashplangroup/github-workflow-library/.github/workflows/version-and-release.yml@master
+    secrets:
+      gh_token: ${{ github.token }}
