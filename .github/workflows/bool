@@ -1,0 +1,18 @@
+on:
+  workflow_dispatch:
+    inputs:
+      debug_enabled:
+        description: 'Run debug session'
+        required: false
+        type: boolean
+
+
+jobs:
+  debug:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Start debug session
+      if: ${{ github.event.inputs.debug_enabled }}
+      run: |
+      echo "Debug session starting ..."
+      echo "debug_enabled: $debug_enabled"
