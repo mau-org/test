@@ -14,5 +14,5 @@ jobs:
     - name: Start debug session
       if: ${{ github.event.inputs.debug_enabled }}
       run: |
-      echo "Debug session starting ..."
-      echo "debug_enabled: $debug_enabled"
+       echo "Debug session starting ..."
+       echo "debug_enabled: $debug_enabled"
