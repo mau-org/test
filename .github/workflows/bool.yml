@@ -16,5 +16,5 @@ jobs:
       run: |
        echo "Debug session starting ..."
        echo "debug_enabled: $DEBUG_ENABLED"
-       env:
+      env:
           DEBUG_ENABLED: ${{ inputs.debug_enabled }}
