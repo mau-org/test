@@ -15,6 +15,6 @@ jobs:
       if: ${{  inputs.debug_enabled  }}
       run: |
        echo "Debug session starting ..."
-       echo "debug_enabled: $DEBUG_ENABLED"
+       echo "debug_enabled: ${{github.event.inputs.debug_enabled}}"
       env:
           DEBUG_ENABLED: ${{ inputs.debug_enabled }}
