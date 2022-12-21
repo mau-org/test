@@ -12,7 +12,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - name: Start debug session
-      if: ${{ github.event.inputs.debug_enabled }}
+      if: ${{  inputs.debug_enabled  }}
       run: |
        echo "Debug session starting ..."
        echo "debug_enabled: $DEBUG_ENABLED"
