@@ -5,7 +5,10 @@ on:
       name:
         description: 'Person to greet'
         required: true
-        default: 'Mona the Octocat'
+        type: choice
+        default: preview
+        choices: [preview, up] # instead of options
+
       home:
         description: 'location'
         required: false
