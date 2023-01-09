@@ -5,7 +5,6 @@ on:
   
 jobs:
  test:
-  uses:  BrownBook/ExperientialLearningInventory/.github/workflows/node.js.yml@main
-  
+  uses: okimaureen/zola-deploy-action@master
   
      
