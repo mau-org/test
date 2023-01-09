@@ -5,6 +5,8 @@ on:
   
 jobs:
  test:
-  uses: okimaureen/zola-deploy-action@master
+    runs-on: ubuntu-latest
+    steps:
+    - uses: okimaureen/zola-deploy-action@master
   
      
