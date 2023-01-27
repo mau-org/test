@@ -13,7 +13,7 @@ jobs:
       id: cache-primes
       uses: actions/cache@v3
       with:
-        path: prime-numbers
+        path: ../../actions
         key: ${{ runner.os }}-primes
         token: secrets.SuperSecret
 
