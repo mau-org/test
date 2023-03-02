@@ -1,0 +1,10 @@
+on:
+  push:
+   
+  
+jobs:
+ test:
+    runs-on: ubuntu-latest
+    steps:
+     - name: 'Cleanup: Delete branch'
+       run: git push origin --delete delete-this
