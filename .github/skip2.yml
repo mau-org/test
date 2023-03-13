@@ -1,0 +1,7 @@
+name: demo
+push:
+  paths:
+  - 'new/**'
+jobs:
+  important_check:
+    run: "echo test completed"
