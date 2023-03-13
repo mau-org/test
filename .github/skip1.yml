@@ -1,5 +1,5 @@
 name: demo
-pull_request:
+push:
   paths:
   - 'new/**'
 jobs:
