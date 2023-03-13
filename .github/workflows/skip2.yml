@@ -2,7 +2,7 @@ name: demo
 
 on:
  push:
-  paths:
+  paths-ignore:
   - 'new/**'
 jobs:
   important_check:
