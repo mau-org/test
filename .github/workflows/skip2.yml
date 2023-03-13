@@ -2,8 +2,8 @@ name: demo
 
 on:
   pull_request:
-  paths-ignore:
-  - 'new/**'
+   paths-ignore:
+   - 'new/**'
 jobs:
   important_check:
     runs-on: ubuntu-latest
