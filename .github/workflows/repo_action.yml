@@ -21,7 +21,7 @@ jobs:
 #           type: remove
       - name: Run local ritual
         if: ${{ success() }}
-        uses: ./.github/action.yml
+        uses: ./action.yml
         with:
           who-to-greet: 'Mona the Octocat'
       - run: echo random-number ${{ steps.foo.outputs.random-number }}
