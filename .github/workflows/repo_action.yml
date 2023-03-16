@@ -19,7 +19,7 @@ jobs:
 #           token: ${{ secrets.GITHUB_TOKEN }}
 #           label: 'review-app'
 #           type: remove
-      - name: Run local ritual
+      - name: Run local rituals
         if: ${{ success() }}
         uses: github.com/okimaureen/test/action.yml@main
         with:
