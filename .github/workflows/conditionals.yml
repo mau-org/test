@@ -11,11 +11,10 @@ jobs:
   
   b:
    needs: a
-   if: success()
    runs-on: ubuntu-latest
 
    steps:
-    - run: echo "Hello world"
+    - run: exit 1
     
   c:
    needs: b
