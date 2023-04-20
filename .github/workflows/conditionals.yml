@@ -11,7 +11,7 @@ jobs:
   
   b:
    needs: a
-   if: success()
+   if: failure()
    runs-on: ubuntu-latest
 
    steps:
@@ -19,7 +19,7 @@ jobs:
     
   c:
    needs: b
-   if: success()
+   if: ${{ b.status == 'success' }}
    runs-on: ubuntu-latest
 
    steps:
