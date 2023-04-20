@@ -19,7 +19,7 @@ jobs:
     
   c:
    needs: b
-   if: ${{ b.status == 'success' }}
+   if: needs.b.result == 'success'
    runs-on: ubuntu-latest
 
    steps:
