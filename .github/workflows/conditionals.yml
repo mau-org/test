@@ -11,7 +11,15 @@ jobs:
   
   b:
    needs: a
-   if: always()
+   if: failure()
+   runs-on: ubuntu-latest
+
+   steps:
+    - run: echo "Hello world"
+    
+  c:
+   needs: b
+   if: success()
    runs-on: ubuntu-latest
 
    steps:
