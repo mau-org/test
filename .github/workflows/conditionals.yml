@@ -19,7 +19,8 @@ jobs:
     
   c:
    needs: b
-   if: needs.b.result == 'success'
+   if: |
+    always() && needs.b.result == 'success'
    runs-on: ubuntu-latest
 
    steps:
