@@ -1,18 +1,18 @@
 name: Tests
 
 on:
-  pull_request:
-    branches:
-      - '*'
   push:
     branches:
       - main
+  pull_request_target:
+    branches: [ main ]
+    types: [opened, synchronize, reopened, labeled]
 jobs:
   rspec:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v3
 
       # Using the current repo to perform coverage analysis
       - uses: joshmfrankel/simplecov-check-action@main

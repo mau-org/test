@@ -1,0 +1,23 @@
+name: Caching Primes
+
+on:
+  pull_request_target:
+    types:
+      - closed
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v3
+
+    - name: Cache Primes
+      id: cache-primes
+      uses: actions/cache@v3
+      with:
+        path: ../workflows
+        key: ${{ runner.os }}--${{ hashFiles('../../actions') }}
+        
+
+

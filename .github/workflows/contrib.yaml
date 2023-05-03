@@ -1,0 +1,31 @@
+name: PR Contribution Detector
+
+on:
+  pull_request:
+    types:
+      - opened
+      - reopened
+
+jobs:
+  checker:
+    runs-on: ubuntu-latest
+    steps:
+        - name: Install Cilium CLI
+          run: |
+            echo author_association=${{ github.event.pull_request.author_association }}
+
+  
+  labeler:
+    if: |
+      (
+        (github.event.pull_request.author_association != 'OWNER') &&
+        (github.event.pull_request.author_association != 'COLLABORATOR') &&
+        (github.event.pull_request.author_association != 'MEMBER')
+      )
+    runs-on: ubuntu-latest
+    permissions:
+      pull-requests: write
+    steps:
+      - name: Install Cilium CLI
+        run: |
+          echo author_association=${{ github.event.pull_request.author_association }}

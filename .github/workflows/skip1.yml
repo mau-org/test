@@ -1,0 +1,14 @@
+name: demo
+
+on:
+ pull_request:
+  paths:
+  - 'new/**'
+jobs:
+  important_check:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Start debug session
+      run: |
+       echo "Debug session starting ..."
+ 

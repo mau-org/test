@@ -1,4 +1,5 @@
 on:
+  push:
   pull_request:
     branches:
       - master
@@ -11,16 +12,16 @@ jobs:
   hola_world_job:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
-      - name: removelabel
-        uses: buildsville/add-remove-label@v1
-        with:
-          token: ${{ secrets.GITHUB_TOKEN }}
-          label: 'review-app'
-          type: remove
-      - name: Run local ritual
+      - uses: actions/checkout@v3
+#       - name: removelabel
+#         uses: buildsville/add-remove-label@v1
+#         with:
+#           token: ${{ secrets.GITHUB_TOKEN }}
+#           label: 'review-app'
+#           type: remove
+      - name: Run local rituals
         if: ${{ success() }}
-        uses: ./.github/actions/action.yml
+        uses: okimaureen/test@main
         with:
           who-to-greet: 'Mona the Octocat'
       - run: echo random-number ${{ steps.foo.outputs.random-number }}

@@ -1,0 +1,9 @@
+name: caller-wf
+on:
+  push:
+  pull_request:
+
+jobs:
+  builder:
+    uses: ./.github/workflows/my-reusable-wf.yml
+    secrets: inherit

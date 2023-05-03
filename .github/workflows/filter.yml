@@ -1,0 +1,13 @@
+name: testfilter
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+  
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Run echo
+        run: echo "${{ github.event }}"
