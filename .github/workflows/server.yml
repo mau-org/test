@@ -2,17 +2,14 @@ name: Submit Cloud Build and deploy endpoints
 
 on:
   push:
-    paths:
-     - '.github/workflows/**'
-  repository_dispatch:
-    types: [custom_event_type]
+  pull_request:
   
 
 jobs:
    Explore-GitHub-Actions:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions-rs/cargo@v1
+      - uses: actions/checkout@v3
         with:
           command: check
       - run: echo "🎉 The job was automatically triggered by a ${{ github.event_name }} events."
